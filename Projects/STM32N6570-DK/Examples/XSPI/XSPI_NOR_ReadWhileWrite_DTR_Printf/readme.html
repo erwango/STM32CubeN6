@@ -19,9 +19,16 @@
 <body>
 <div class="row">
 <div class="col-sm-12 col-lg-8">
-<h2 id="xspi_nor_readwhilewrite_dtr-example-description"><b>XSPI_NOR_ReadWhileWrite_DTR Example Description</b></h2>
-<p>How to write and read data on XSPI NOR memory (bank1) when code is executed from bank0</p>
-<p>This example demonstrates the Read While Write feature using Macronix NOR Flash which supports simultaneous Read and Write operations (WRBI, WRCT, WRCF)</p>
+<h2 id="xspi_nor_readwhilewrite_dtr_printf-example-description"><b>XSPI_NOR_ReadWhileWrite_DTR_Printf Example Description</b></h2>
+<p>How to write and read data on XSPI NOR memory (bank1) when code is executed from bank0, with printf logging enabled to trace XSPI command execution.</p>
+<p>This example demonstrates the Read While Write feature using Macronix NOR Flash which supports simultaneous Read and Write operations (WRBI, WRCT, WRCF).</p>
+<p>This is an enhanced version of the XSPI_NOR_ReadWhileWrite_DTR example with the following additions:</p>
+<ul>
+<li>USART1 is configured for printf functionality (115200 baud, 8N1)</li>
+<li>Printf statements are added after each HAL_XSPI_Command call to log CCR and TCR register values</li>
+<li>Output format: "COMMAND_NAME: CCR=0x%08lx TCR=0x%08lx\r\n"</li>
+<li>UART pins: PE5 (TX), PE6 (RX)</li>
+</ul>
 <ul>
 <li>Project structure:
 <ul>
